@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/core/resources/alpha_manager.dart';
 import '../../../core/resources/assets_manager.dart';
 import '../../../core/resources/colors_manager.dart';
-import '../../../core/resources/padding_manager.dart';
 
 class SplashLogo extends StatelessWidget {
   const SplashLogo({
@@ -18,16 +18,14 @@ class SplashLogo extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            ColorsManager.primaryColor,
-            ColorsManager.secondaryColor.withValues(alpha: 0.54),
+            ColorsManager.purple,
+            ColorsManager.deepPurple,
+            ColorsManager.blue.withValues(alpha: AlphaManager.a0_54),
           ],
         ),
       ),
-      child: Padding(
-        padding: PaddingManager.p100,
-        child: Image(
-            image: AssetImage(AssetsManager.logo)
-        ),
+      child: Image(
+          image: AssetImage(AssetsManager.logo)
       ),
     );
   }
