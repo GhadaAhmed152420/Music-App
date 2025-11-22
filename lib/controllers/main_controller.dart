@@ -3,7 +3,7 @@ import '../core/resources/assets_manager.dart';
 import '../views/home/view/home_screen.dart';
 
 class MainController {
-  static int currentIndex = 0;
+  static int currentIndex = 1;
 
   static void changeScreen(int index) {
     currentIndex = index;

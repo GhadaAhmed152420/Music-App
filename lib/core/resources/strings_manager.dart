@@ -4,4 +4,8 @@ class StringsManager {
   static const String onboardingSubtitle =
       'Find Your Latest Favourite Music From Our Collection';
   static const String onboardingButtonText = 'Get Started';
+  static const String homeSearchHintText = 'Search Song';
+  static const String homePartitionTitle1 = "Recently Played";
+  static const String homePartitionTitle2 = "Recommended Music";
+
 }
