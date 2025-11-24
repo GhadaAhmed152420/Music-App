@@ -8,5 +8,6 @@ class HeightManager {
   static const double h151 = 151.0;
   static const double h72 = 72.0;
   static const double h21 = 21.0;
+  static const double h247 = 247.0;
 
 }
