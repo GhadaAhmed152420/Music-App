@@ -8,7 +8,6 @@ import '../widgets/home_partition_title.dart';
 import '../widgets/recently_played_list.dart';
 import '../widgets/recommended_music_list.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -34,9 +33,15 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             CustomSearchBox(),
-            HomePartitionTitle(title: StringsManager.homePartitionTitle1,rightPadding: PaddingManager.p208,),
+            HomePartitionTitle(
+              title: StringsManager.homePartitionTitle1,
+              rightPadding: PaddingManager.p208,
+            ),
             RecentlyPlayedList(),
-            HomePartitionTitle(title: StringsManager.homePartitionTitle2,rightPadding: PaddingManager.p160,),
+            HomePartitionTitle(
+              title: StringsManager.homePartitionTitle2,
+              rightPadding: PaddingManager.p160,
+            ),
             RecommendedMusicList(),
           ],
         ),
@@ -44,5 +49,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-

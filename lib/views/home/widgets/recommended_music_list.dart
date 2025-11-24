@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:music_app/core/resources/font_size_manager.dart';
 import 'package:music_app/core/resources/height_manager.dart';
@@ -17,32 +18,39 @@ class RecommendedMusicList extends StatelessWidget {
     return ListView.separated(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      itemBuilder: (context, index) => ListTile(
-        leading: SizedBox(
-          width: WidthManager.w72,
-          height: HeightManager.h72,
-          child: CircleAvatar(
-            backgroundImage: NetworkImage(HomeController.songsModel.image),
-          ),
-        ),
-        title:Padding(
-          padding: const EdgeInsets.only(top: PaddingManager.p9),
-          child: Text(
-            HomeController.songsModel.name,
-            style: TextStyle(color: ColorsManager.white,
-              fontSize: FontSizeManager.fs15,
-              fontWeight: FontWeight.w500,
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: (){
+          if (kDebugMode) {
+            print("object");
+          }
+        },
+        child: ListTile(
+          leading: SizedBox(
+            width: WidthManager.w72,
+            height: HeightManager.h72,
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(HomeController.songsModel.image),
             ),
           ),
-        ),
-        subtitle: Text(
-          HomeController.songsModel.singer,
-          style: TextStyle(color: ColorsManager.lilac,
-            fontSize: FontSizeManager.fs12,
-            fontWeight: FontWeight.w400,
+          title:Padding(
+            padding: const EdgeInsets.only(top: PaddingManager.p9),
+            child: Text(
+              HomeController.songsModel.name,
+              style: TextStyle(color: ColorsManager.white,
+                fontSize: FontSizeManager.fs15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ),
+          subtitle: Text(
+            HomeController.songsModel.singer,
+            style: TextStyle(color: ColorsManager.lilac,
+              fontSize: FontSizeManager.fs12,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          trailing: Image.asset(AssetsManager.favorite),
         ),
-        trailing: Image.asset(AssetsManager.favorite),
       ),
       separatorBuilder: (context, index) => SizedBox(height: HeightManager.h21),
       itemCount: 10,
