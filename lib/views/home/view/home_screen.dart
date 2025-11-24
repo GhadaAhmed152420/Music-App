@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/assets_manager.dart';
 import 'package:music_app/core/resources/colors_manager.dart';
 import 'package:music_app/core/resources/padding_manager.dart';
 import 'package:music_app/core/resources/strings_manager.dart';

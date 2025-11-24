@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/core/resources/alpha_manager.dart';
 import 'package:music_app/core/resources/assets_manager.dart';
-import 'package:music_app/views/on_boarding/widgets/custom_btn.dart';
-import 'package:music_app/views/on_boarding/widgets/custom_title.dart';
+import 'package:music_app/views/onboarding/widgets/custom_btn.dart';
+import 'package:music_app/views/onboarding/widgets/custom_title.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../../../core/resources/height_manager.dart';
 import '../widgets/custom_subtitle.dart';

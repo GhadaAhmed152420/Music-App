@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import '../core/resources/routes_manager.dart';
 import '../models/songs_model.dart';
 
 class HomeController {
@@ -7,4 +9,8 @@ class HomeController {
     singer: "Singer Name",
     path: '',
   );
+
+  static void navigateToPlayScreen(BuildContext context) {
+    Navigator.pushNamed(context, RoutePaths.play);
+  }
 }

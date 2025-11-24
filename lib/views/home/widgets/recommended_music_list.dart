@@ -9,9 +9,7 @@ import '../../../core/resources/assets_manager.dart';
 import '../../../core/resources/colors_manager.dart';
 
 class RecommendedMusicList extends StatelessWidget {
-  const RecommendedMusicList({
-    super.key,
-  });
+  const RecommendedMusicList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +17,8 @@ class RecommendedMusicList extends StatelessWidget {
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) => GestureDetector(
-        onTap: (){
-          if (kDebugMode) {
-            print("object");
-          }
+        onTap: () {
+          HomeController.navigateToPlayScreen(context);
         },
         child: ListTile(
           leading: SizedBox(
@@ -32,11 +28,12 @@ class RecommendedMusicList extends StatelessWidget {
               backgroundImage: NetworkImage(HomeController.songsModel.image),
             ),
           ),
-          title:Padding(
+          title: Padding(
             padding: const EdgeInsets.only(top: PaddingManager.p9),
             child: Text(
               HomeController.songsModel.name,
-              style: TextStyle(color: ColorsManager.white,
+              style: TextStyle(
+                color: ColorsManager.white,
                 fontSize: FontSizeManager.fs15,
                 fontWeight: FontWeight.w500,
               ),
@@ -44,7 +41,8 @@ class RecommendedMusicList extends StatelessWidget {
           ),
           subtitle: Text(
             HomeController.songsModel.singer,
-            style: TextStyle(color: ColorsManager.lilac,
+            style: TextStyle(
+              color: ColorsManager.lilac,
               fontSize: FontSizeManager.fs12,
               fontWeight: FontWeight.w400,
             ),
