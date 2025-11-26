@@ -8,6 +8,7 @@ import 'package:music_app/views/play/widgets/custom_actions_list.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../widgets/custom_player_controls.dart';
 import '../widgets/custom_song_details.dart';
+import '../widgets/custom_up_next_panel.dart';
 
 class PlayScreen extends StatelessWidget {
   const PlayScreen({super.key});
@@ -63,7 +64,8 @@ class PlayScreen extends StatelessWidget {
           children: [
             CustomSongDetails(),
             CustomPlayerControls(onChanged: (double value) {  }, value: 0.6,),
-            CustomActionsList()
+            CustomActionsList(),
+            CustomUpNextPanel(),
           ],
         ),
       ),
