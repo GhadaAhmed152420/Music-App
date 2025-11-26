@@ -61,7 +61,7 @@ class PlayScreen extends StatelessWidget {
         child: Column(
           children: [
             CustomSongDetails(),
-            CustomPlayerControls(),
+            CustomPlayerControls(onChanged: (double value) {  }, value: 0.6,),
           ],
         ),
       ),
