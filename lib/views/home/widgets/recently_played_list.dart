@@ -5,7 +5,6 @@ import 'package:music_app/core/resources/height_manager.dart';
 import 'package:music_app/core/resources/padding_manager.dart';
 import 'package:music_app/core/resources/radius_manager.dart';
 import 'package:music_app/core/resources/width_manager.dart';
-import 'package:music_app/models/songs_model.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../../../core/resources/consts_values.dart';
 
@@ -34,13 +33,13 @@ class RecentlyPlayedList extends StatelessWidget {
                   child: SizedBox(
                     width: WidthManager.w151,
                     height: HeightManager.h151,
-                    child: Image.network(ConstsValues.songsList[index].image),
+                    child: Image.network(ConstsValues.quranList[index].image),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: PaddingManager.p9),
                   child: Text(
-                    ConstsValues.songsList[index].name,
+                    ConstsValues.quranList[index].surahName,
                     style: TextStyle(
                       color: ColorsManager.white,
                       fontSize: FontSizeManager.fs15,
@@ -49,7 +48,7 @@ class RecentlyPlayedList extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  ConstsValues.songsList[index].singer,
+                  ConstsValues.quranList[index].reciter,
                   style: TextStyle(
                     color: ColorsManager.lilac,
                     fontSize: FontSizeManager.fs12,
@@ -61,7 +60,7 @@ class RecentlyPlayedList extends StatelessWidget {
           ),
           separatorBuilder: (context, index) =>
               SizedBox(width: WidthManager.w17),
-          itemCount: ConstsValues.songsList.length,
+          itemCount: ConstsValues.quranList.length,
         ),
       ),
     );

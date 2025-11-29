@@ -26,13 +26,13 @@ class RecommendedMusicList extends StatelessWidget {
             width: WidthManager.w72,
             height: HeightManager.h72,
             child: CircleAvatar(
-              backgroundImage: NetworkImage(  ConstsValues.songsList[index].image),
+              backgroundImage: NetworkImage(  ConstsValues.quranList[index].image),
             ),
           ),
           title: Padding(
             padding: const EdgeInsets.only(top: PaddingManager.p9),
             child: Text(
-              ConstsValues.songsList[index].name,
+              ConstsValues.quranList[index].surahName,
               style: TextStyle(
                 color: ColorsManager.white,
                 fontSize: FontSizeManager.fs15,
@@ -41,7 +41,7 @@ class RecommendedMusicList extends StatelessWidget {
             ),
           ),
           subtitle: Text(
-            ConstsValues.songsList[index].singer,
+            ConstsValues.quranList[index].reciter,
             style: TextStyle(
               color: ColorsManager.lilac,
               fontSize: FontSizeManager.fs12,
@@ -52,7 +52,7 @@ class RecommendedMusicList extends StatelessWidget {
         ),
       ),
       separatorBuilder: (context, index) => SizedBox(height: HeightManager.h21),
-      itemCount:   ConstsValues.songsList.length,
+      itemCount:   ConstsValues.quranList.length,
     );
   }
 }

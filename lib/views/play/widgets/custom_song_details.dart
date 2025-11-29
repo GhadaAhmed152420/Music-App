@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/models/songs_model.dart';
-import '../../../controllers/home_controller.dart';
+import 'package:music_app/models/quran_track.dart';
 import '../../../core/resources/alpha_manager.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../../../core/resources/font_size_manager.dart';
@@ -10,9 +9,9 @@ import '../../../core/resources/radius_manager.dart';
 import '../../../core/resources/width_manager.dart';
 
 class CustomSongDetails extends StatelessWidget {
-  const CustomSongDetails({super.key, required this.songModel});
+  const CustomSongDetails({super.key, required this.quranTrack});
 
-  final SongModel songModel;
+  final QuranTrack quranTrack;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,7 @@ class CustomSongDetails extends StatelessWidget {
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(RadiusManager.r20),
-                child: Image.network(songModel.image),
+                child: Image.network(quranTrack.image),
               ),
             ),
           ],
@@ -53,7 +52,7 @@ class CustomSongDetails extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: PaddingManager.p23),
           child: Text(
-            songModel.name,
+            quranTrack.surahName,
             style: TextStyle(
               color: ColorsManager.white,
               fontSize: FontSizeManager.fs18,
@@ -64,7 +63,7 @@ class CustomSongDetails extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: PaddingManager.p4),
           child: Text(
-            songModel.singer,
+            quranTrack.reciter,
             style: TextStyle(
               color: ColorsManager.lilac,
               fontSize: FontSizeManager.fs12,

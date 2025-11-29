@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/models/songs_model.dart';
+import 'package:music_app/models/quran_track.dart';
 import '../../../core/resources/alpha_manager.dart';
 import '../../../core/resources/assets_manager.dart';
 import '../../../core/resources/colors_manager.dart';
@@ -10,9 +10,9 @@ import '../../../core/resources/radius_manager.dart';
 import '../../../core/resources/width_manager.dart';
 
 class CustomUpNextPanel extends StatelessWidget {
-  const CustomUpNextPanel({super.key, required this.songModel});
+  const CustomUpNextPanel({super.key, required this.quranTrack});
 
-  final SongModel songModel;
+  final QuranTrack quranTrack;
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class CustomUpNextPanel extends StatelessWidget {
                       borderRadius: BorderRadius.circular(RadiusManager.r10),
                       image: DecorationImage(
                         image: NetworkImage(
-                          songModel.image,
+                          quranTrack.image,
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -88,7 +88,7 @@ class CustomUpNextPanel extends StatelessWidget {
                   title: Padding(
                     padding: const EdgeInsets.only(top: PaddingManager.p9),
                     child: Text(
-                      songModel.name,
+                      quranTrack.surahName,
                       style: TextStyle(
                         color: ColorsManager.white,
                         fontSize: FontSizeManager.fs15,
@@ -97,7 +97,7 @@ class CustomUpNextPanel extends StatelessWidget {
                     ),
                   ),
                   subtitle: Text(
-                      songModel.singer,
+                      quranTrack.reciter,
                     style: TextStyle(
                       color: ColorsManager.lilac,
                       fontSize: FontSizeManager.fs12,

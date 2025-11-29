@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:music_app/core/resources/consts_values.dart';
-import 'package:music_app/models/songs_model.dart';
+import 'package:music_app/models/quran_track.dart';
 import '../core/resources/routes_manager.dart';
 
 class PlayController {
-  late SongModel songModel;
+  late QuranTrack quranTrack;
   late int index;
 
   void getArgIndex(BuildContext context) {
     index = ModalRoute.of(context)!.settings.arguments as int;
-    songModel = ConstsValues.songsList[index];
+    quranTrack = ConstsValues.quranList[index];
   }
 
   static void popToHomeScreen(BuildContext context) {

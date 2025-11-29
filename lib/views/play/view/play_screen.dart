@@ -19,17 +19,17 @@ class PlayScreen extends StatefulWidget {
 }
 
 class _PlayScreenState extends State<PlayScreen> {
-  late PlayController _controller;
+  late PlayController controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = PlayController();
+    controller = PlayController();
   }
 
   @override
   Widget build(BuildContext context) {
-    _controller.getArgIndex(context);
+    controller.getArgIndex(context);
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -82,10 +82,10 @@ class _PlayScreenState extends State<PlayScreen> {
         ),
         child: Column(
           children: [
-            CustomSongDetails(songModel: _controller.songModel),
+            CustomSongDetails(quranTrack: controller.quranTrack),
             CustomPlayerControls(onChanged: (double value) {}, value: 0.6),
             CustomActionsList(),
-            CustomUpNextPanel(songModel: _controller.songModel),
+            CustomUpNextPanel(quranTrack: controller.quranTrack),
           ],
         ),
       ),
