@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:music_app/core/resources/consts_values.dart';
 import 'package:music_app/models/quran_track.dart';
@@ -12,7 +13,18 @@ class PlayController {
     quranTrack = ConstsValues.quranList[index];
   }
 
-  static void popToHomeScreen(BuildContext context) {
+   void popToHomeScreen(BuildContext context) {
     Navigator.pop(context, RoutePaths.home);
   }
+
+
+   void playTrack(int index)async{
+    AudioCache audioCache = AudioCache(prefix: "");
+    Uri url = await audioCache.load(ConstsValues.quranList[index].audioPath);
+    AudioPlayer audioPlayer = AudioPlayer();
+    audioPlayer.play(UrlSource(url.toString()));
+
+  }
+
 }
+

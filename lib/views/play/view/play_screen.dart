@@ -20,11 +20,19 @@ class PlayScreen extends StatefulWidget {
 
 class _PlayScreenState extends State<PlayScreen> {
   late PlayController controller;
+  late int index;
 
   @override
   void initState() {
     super.initState();
     controller = PlayController();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    index = ModalRoute.of(context)!.settings.arguments as int;
+    controller.playTrack(index);
   }
 
   @override
@@ -41,7 +49,7 @@ class _PlayScreenState extends State<PlayScreen> {
             color: ColorsManager.white,
           ),
           onPressed: () {
-            PlayController.popToHomeScreen(context);
+            controller.popToHomeScreen(context);
           },
         ),
         title: Text(

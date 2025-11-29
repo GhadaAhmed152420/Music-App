@@ -8,10 +8,14 @@ import '../../../core/resources/assets_manager.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../../../core/resources/consts_values.dart';
 
-class RecommendedMusicList extends StatelessWidget {
+class RecommendedMusicList extends StatefulWidget {
   const RecommendedMusicList({super.key});
 
+  @override
+  State<RecommendedMusicList> createState() => _RecommendedMusicListState();
+}
 
+class _RecommendedMusicListState extends State<RecommendedMusicList> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
