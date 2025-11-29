@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/colors_manager.dart';
-import 'package:music_app/core/resources/padding_manager.dart';
-import 'package:music_app/core/resources/strings_manager.dart';
+import 'package:quran_app/core/resources/colors_manager.dart';
+import 'package:quran_app/core/resources/padding_manager.dart';
+import 'package:quran_app/core/resources/strings_manager.dart';
 import '../widgets/custom_search_box.dart';
 import '../widgets/home_partition_title.dart';
 import '../widgets/recently_played_list.dart';

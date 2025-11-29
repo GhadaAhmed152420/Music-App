@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/font_size_manager.dart';
-import 'package:music_app/core/resources/padding_manager.dart';
+import 'package:quran_app/core/resources/font_size_manager.dart';
+import 'package:quran_app/core/resources/padding_manager.dart';
 import '../../../core/resources/assets_manager.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../../../core/resources/height_manager.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/controllers/splash_controller.dart';
+import 'package:quran_app/controllers/splash_controller.dart';
 import '../widgets/logo.dart';
 
 class SplashScreen extends StatefulWidget {

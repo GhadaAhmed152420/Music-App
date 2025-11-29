@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/models/quran_track.dart';
+import 'package:quran_app/models/quran_track.dart';
 import '../../../core/resources/alpha_manager.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../../../core/resources/font_size_manager.dart';

@@ -1,7 +1,6 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:music_app/core/resources/consts_values.dart';
-import 'package:music_app/models/quran_track.dart';
+import 'package:quran_app/core/resources/consts_values.dart';
+import 'package:quran_app/models/quran_track.dart';
 import '../core/resources/routes_manager.dart';
 
 class PlayController {

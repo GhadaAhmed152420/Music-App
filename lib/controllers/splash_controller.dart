@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/time_manager.dart';
+import 'package:quran_app/core/resources/time_manager.dart';
 import '../core/resources/routes_manager.dart';
 
 class SplashController {
