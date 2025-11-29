@@ -13,18 +13,8 @@ class PlayController {
     quranTrack = ConstsValues.quranList[index];
   }
 
-   void popToHomeScreen(BuildContext context) {
+  void popToHomeScreen(BuildContext context) {
     Navigator.pop(context, RoutePaths.home);
   }
 
-
-   void playTrack(int index)async{
-    AudioCache audioCache = AudioCache(prefix: "");
-    Uri url = await audioCache.load(ConstsValues.quranList[index].audioPath);
-    AudioPlayer audioPlayer = AudioPlayer();
-    audioPlayer.play(UrlSource(url.toString()));
-
-  }
-
 }
-

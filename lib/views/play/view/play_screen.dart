@@ -6,6 +6,7 @@ import 'package:music_app/core/resources/padding_manager.dart';
 import 'package:music_app/core/resources/strings_manager.dart';
 import 'package:music_app/core/resources/width_manager.dart';
 import 'package:music_app/views/play/widgets/custom_actions_list.dart';
+import '../../../controllers/audio_controller.dart';
 import '../../../core/resources/colors_manager.dart';
 import '../widgets/custom_player_controls.dart';
 import '../widgets/custom_song_details.dart';
@@ -20,6 +21,7 @@ class PlayScreen extends StatefulWidget {
 
 class _PlayScreenState extends State<PlayScreen> {
   late PlayController controller;
+  late AudioController audioController;
   late int index;
 
   @override
@@ -32,7 +34,14 @@ class _PlayScreenState extends State<PlayScreen> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     index = ModalRoute.of(context)!.settings.arguments as int;
-    controller.playTrack(index);
+    audioController = AudioController(index);
+    audioController.playTrack();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    audioController.disposeTrack();
   }
 
   @override
