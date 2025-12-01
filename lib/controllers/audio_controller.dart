@@ -7,7 +7,7 @@ class AudioController {
   late AudioCache audioCache;
   late Uri url;
 
-  AudioController._(this.index){
+  AudioController._(this.index) {
     audioCache = AudioCache(prefix: "");
     audioPlayer = AudioPlayer();
   }
@@ -15,7 +15,7 @@ class AudioController {
   static late final AudioController _instance;
 
   factory AudioController(int index) {
-    _instance ??= AudioController._(index);
+    _instance = AudioController._(index);
     return _instance;
   }
 
@@ -24,7 +24,11 @@ class AudioController {
     audioPlayer.play(UrlSource(url.toString()));
   }
 
-  void disposeTrack() {
-    audioPlayer.dispose();
+  void stopTrack() {
+    if (audioPlayer.state == PlayerState.playing) {
+      audioPlayer.pause();
+    } else if (audioPlayer.state == PlayerState.paused) {
+      audioPlayer.resume();
+    }
   }
 }

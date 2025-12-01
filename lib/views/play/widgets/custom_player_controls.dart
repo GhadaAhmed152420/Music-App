@@ -11,10 +11,12 @@ class CustomPlayerControls extends StatelessWidget {
   const CustomPlayerControls({
     required this.onChanged,
     super.key,
-    required this.value,
+    required this.value, required this.onStop,
   });
   final ValueChanged<double> onChanged;
   final double value;
+  final GestureTapCallback onStop;
+
 
   @override
   Widget build(BuildContext context) {
@@ -53,14 +55,17 @@ class CustomPlayerControls extends StatelessWidget {
                   height: HeightManager.h20,
                 ),
               ),
-              CircleAvatar(
-                radius: RadiusManager.r30,
-                backgroundColor: ColorsManager.lilac,
-                child: Image.asset(
-                  AssetsManager.pause,
-                  color: ColorsManager.white,
-                  width: WidthManager.w24,
-                  height: HeightManager.h24,
+              InkWell(
+                onTap: onStop,
+                child: CircleAvatar(
+                  radius: RadiusManager.r30,
+                  backgroundColor: ColorsManager.lilac,
+                  child: Image.asset(
+                    AssetsManager.pause,
+                    color: ColorsManager.white,
+                    width: WidthManager.w24,
+                    height: HeightManager.h24,
+                  ),
                 ),
               ),
               Container(

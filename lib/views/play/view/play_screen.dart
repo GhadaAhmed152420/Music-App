@@ -99,7 +99,9 @@ class _PlayScreenState extends State<PlayScreen> {
         child: Column(
           children: [
             CustomSongDetails(quranTrack: controller.quranTrack),
-            CustomPlayerControls(onChanged: (double value) {}, value: 0.6),
+            CustomPlayerControls(onChanged: (double value) {}, value: 0.6, onStop: () {
+              _audioController.stopTrack();
+            },),
             CustomActionsList(),
             CustomUpNextPanel(quranTrack: controller.quranTrack),
           ],
